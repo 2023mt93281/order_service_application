@@ -1,11 +1,11 @@
 # Use an official OpenJDK runtime as a parent image
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy
 
 # Set the working directory in the container
 WORKDIR /app
 
 # Copy the application's JAR file to the container
-COPY target/order_service_application.jar app.jar
+COPY target/*.jar app.jar
 
 # Expose the port the application runs on
 EXPOSE 8080
